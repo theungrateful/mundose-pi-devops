@@ -1,0 +1,7 @@
+# Configuración personalizada para kube-state-metrics
+args:
+  - --port=8080
+  - --resources=certificatesigningrequests,configmaps,cronjobs,daemonsets,deployments,endpoints,horizontalpodautoscalers,ingresses,jobs,leases,limitranges,mutatingwebhookconfigurations,namespaces,networkpolicies,nodes,persistentvolumeclaims,persistentvolumes,poddisruptionbudgets,pods,replicasets,replicationcontrollers,resourcequotas,secrets,services,statefulsets,storageclasses,validatingwebhookconfigurations,volumeattachments
+  - --metric-labels-allowlist=pods=[*],nodes=[*]
+  - --metric-annotations-allowlist=pods=[*],nodes=[*]
+  - --collectors=pods,nodes,services,namespaces,deployments,resourcequotas,replicasets,limitranges,storageclasses,horizontalpodautoscalers,daemonsets,statefulsets
